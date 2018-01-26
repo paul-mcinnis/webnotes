@@ -34,7 +34,13 @@ namespace WebNotes.Domain
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    "Default",
+                    "/domain/api/{controller}/{action}/{id?}",
+                    new { controller = "", action = "", id = "" });
+            });
         }
     }
 }
