@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebNotes.Domain.Controllers
 {
-
+    [Produces("application/json")]
     public class DomainController : Controller
     {
         // GET api/values
