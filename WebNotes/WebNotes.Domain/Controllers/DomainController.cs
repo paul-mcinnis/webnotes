@@ -11,7 +11,7 @@ namespace WebNotes.Domain.Controllers
     {
         // GET api/values
         [HttpGet]
-        public string Get()
+        public string GetData(string docUrl)
         {
             return "Domain Api Works!";
         }
