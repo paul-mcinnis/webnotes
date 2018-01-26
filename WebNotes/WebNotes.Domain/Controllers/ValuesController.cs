@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebNotes.Domain.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("domain/api/[controller]")]
     public class ValuesController : Controller
     {
         // GET api/values
