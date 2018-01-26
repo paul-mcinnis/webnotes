@@ -1,0 +1,7 @@
+<header class="header">
+  <h1 class="header_h1"> {{ title }} </h1>
+</header>
+<p class="doc_id"> {{docUrl}}</p>
+<div class="doc">
+  <textarea #doc="ngModel" class="doc_text-editor" [(ngModel)]="data" (keyup)="onKey()"></textarea>
+</div>

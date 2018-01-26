@@ -1,0 +1,40 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.header_h1 {
+  margin: auto;
+  padding: 10px;
+  color: #424242
+}
+
+.doc {
+  width: 65%;
+  padding: 40px 28px;
+  height: 500px;
+  background: rgba(255,255,255,0.75);
+  margin: 30px auto;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.9);
+}
+.doc_id {
+  margin: -40px 0 0 40px;
+  size: 16pt;
+  color: #424242;
+  font-family: "Helvetica", "Arial";
+  font-style: italic;
+}
+
+.doc_text-editor {
+  background: transparent;
+  outline:none;
+  border: none;
+  width: 100%;
+  height: 450px;
+}
+
+.doc_text-editor:focus {
+  outline:none;
+  border:none;
+}
