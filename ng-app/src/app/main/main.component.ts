@@ -1,4 +1,5 @@
-import { Component, Document, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -16,11 +17,12 @@ export class MainComponent implements OnInit {
   data = '';
 
   constructor(
+    @Inject(DOCUMENT) private doc: any,
     private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router,
   ) {
-    this.apiUrl = Document.location.protocol + '//' + Document.location.host + this.apiPath;
+    this.apiUrl = doc.location.protocol + '//' + doc.location.host + '/' + this.apiPath;
   }
 
   ngOnInit() {
@@ -44,8 +46,6 @@ export class MainComponent implements OnInit {
   onKey() {
     const body = {
       data: this.data,
-      Uri: this.docUrl,
-      userId: this.userId
     };
     this.http.put(this.apiUrl + 'update', body).subscribe(
       (rs) => {
@@ -60,6 +60,5 @@ export class MainComponent implements OnInit {
         this.data = rs.toString();
         console.log('get resp = ' + rs.toString());
       });
-    this.register();
   }
 }
