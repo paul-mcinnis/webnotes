@@ -38,7 +38,7 @@ namespace WebNotes.Domain
             {
                 routes.MapRoute(
                     "Default",
-                    "/domain/api/{controller}/{action}/{id?}",
+                    "domain/api/{controller}/{action}/{id?}",
                     new { controller = "", action = "", id = "" });
             });
         }

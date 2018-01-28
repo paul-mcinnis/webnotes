@@ -9,7 +9,6 @@ namespace WebNotes.Domain.Controllers
     [Produces("application/json")]
     public class DomainController : Controller
     {
-        // GET api/values
         [HttpGet]
         public string GetData(string docUrl)
         {
