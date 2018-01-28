@@ -36,9 +36,16 @@ namespace WebNotes.Domain
 
             app.UseMvc(routes =>
             {
+
+
+                routes.MapRoute(
+                    "Docs Api",
+                    "domain/api/{action}/{id?}",
+                    new { controller = "domain", action = "", id = "" });
+
                 routes.MapRoute(
                     "Default",
-                    "domain/api/{controller}/{action}/{id?}",
+                    "{controller}/{action}/{id?}",
                     new { controller = "", action = "", id = "" });
             });
         }
